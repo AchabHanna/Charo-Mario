@@ -1,5 +1,17 @@
 # `OXO` game library
 
+# ACHAB HANNA
+
+# Blidi Lina
+
+# Cérin Camille
+
+# Ndiaye Ousmane
+
+s
+
+# charo-mario.netlify.com
+
 This is a boilerplate repository using `OXO`, a minimalist game library to handle common actions in games. This is not optimized for production and uses purposefully simplified patterns for an educational purpose.
 
 - [How to use](#how-to-use)
