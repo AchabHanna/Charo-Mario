@@ -1,0 +1,53 @@
+body {
+}
+
+.head {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.mush {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.text.scoreNumber {
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rooms {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.room {
+  height: 100px;
+  width: 100px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+.roomBedroom {
+  background-color: Red;
+}
+
+.roomBathroom {
+  background-color: Orange;
+}
+
+.roomLivingRoom {
+  background-color: yellow;
+}
+
+.roomCorridor {
+  background-color: green;
+}
