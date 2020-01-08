@@ -1,0 +1,75 @@
+.pieces {
+  height: 100px;
+  width: 100px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  justify-content: space-around;
+  z-index: 1;
+  top: -60px;
+  flex-direction: row;
+}
+
+.mush {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+}
+
+.text.scoreNumber {
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+
+  right: 0;
+  top: 20px;
+}
+
+.flexItem.rooms {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: fixed;
+  z-index: 1000000;
+  width: 100%;
+  top: 0;
+}
+
+.piece1 {
+  background: #ee8dd9;
+}
+.piece2 {
+  background: #a4edf1;
+}
+.piece3 {
+  background: #ff7272;
+}
+.piece4 {
+  background: #aacfae;
+}
+
+.maison {
+  position: relative;
+}
+
+.element {
+  height: 100px;
+  width: 100px;
+}
+
+.list {
+  display: flex;
+}
+
+.score {
+  position: relative;
+  z-index: 1000;
+}
