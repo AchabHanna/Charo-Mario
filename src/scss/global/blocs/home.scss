@@ -7,9 +7,9 @@
 }
 
 .main {
-  background: url(../images/crying-peach.png);
-  width: 1366px;
-  height: 750px;
+  background: url(/images/crying-peach.png);
+  // width: 1366px;
+  // height: 750px;
   background-position: inherit;
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,7 +32,7 @@
 }
 
 .titleOfTheGame {
-  background: url(../images/rectangle.png);
+  background: url(/images/rectangle.png);
   width: 342px;
   height: 140px;
   position: relative;

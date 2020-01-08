@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "wonder";
+  src: url("/fonts/wonder.TTF") format("ttf"),
+    url("/fonts/wonder.TTF") format("truetype");
+}
+
+.backgroundGO {
+  background-color: black;
+  max-height: 750px;
+  max-width: 1366;
+  color: White;
+}
+.text {
+  font-family: "wonder";
+}
+
+.cap {
+  height: 250px;
+  width: 500px;
+  margin-right: 900px;
+}
+.position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.write {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.score {
+  font-size: 30px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+.gameOver {
+  font-size: 80px;
+}
+
+.replaySection {
+  background-color: rgba(231, 231, 231, 0.37);
+  padding: 40px;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.choice {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.yesButton {
+  margin-right: 100px;
+  text-decoration: none;
+  color: white;
+  :hover {
+    color: #01d916;
+  }
+}
+
+.noButton {
+  margin-left: 100px;
+  text-decoration: none;
+  color: white;
+  :hover {
+    color: #ff0000;
+  }
+}
