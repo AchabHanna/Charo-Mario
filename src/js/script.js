@@ -36,45 +36,19 @@ oxo.screens.loadScreen("home", function() {
     });
   });
 });
-
-let daisyHere = document.getElementById("daisyhere");
-daisyHere.addEventListener("click", function() {
-  let daisy = document.getElementById("sleepingdaisy");
-  if (daisy.style.display == "none") {
-    daisy.style.display == "block";
-  } else {
-    daisy.style.display = "none";
-  }
-});
 // clique jouer #fin
-// Changement de page superposition js data
-let pieces = document.querySelectorAll(".pieces");
-let currentPiece = "piece2";
-console.log(pieces);
-for (let i = 0; i < pieces.length; i++) {
-  if (!pieces[i].classList.contains(currentPiece)) {
-    pieces[i].style.display = "none";
-  }
-}
-let elements = document.querySelectorAll(".element");
 
-for (let i = 0; i < elements.length; i++) {
-  // on ajoute un ecouteur d'evenement à chaque element
-  elements[i].addEventListener("click", function() {
-    // on a recupere le numero de piece de l'element
-    let pieceNb = elements[i].getAttribute("data-piece");
-    for (let j = 0; j < pieces.length; j++) {
-      if (pieces[j].getAttribute("data-piece") == pieceNb) {
-        console.log("on affiche", pieces[j]);
-        pieces[j].style.display = "block";
-      } else {
-        pieces[j].style.display = "none";
-
-        // piece[j].style.display ="none";
-      }
-      // on affiche la piece qui est = pieceNb
-      // on cache les autre pieces
-      console.log(pieces[j].dataset.piece);
+// faire disparaitre Daisy au clique #debut
+oxo.screens.loadScreen("game1", function() {
+  let daisyHere = document.getElementById("daisyhere");
+  daisyHere.addEventListener("click", function() {
+    let daisy = document.getElementById("sleepingdaisy");
+    if (daisy.style.display == "none") {
+      daisy.style.display == "block";
+    } else {
+      daisy.style.display = "none";
     }
   });
-}
+});
+
+// faire disparaitre Daisy au clique #fin
