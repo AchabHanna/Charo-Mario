@@ -1,0 +1,20 @@
+.game3 {
+  body {
+    background-image: url(../images/Daisy4.png);
+  }
+
+  .daisyText4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: #453737;
+    opacity: 0.75;
+    position: absolute;
+    font-size: 30px;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+  }
+}
