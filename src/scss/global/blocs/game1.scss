@@ -1,22 +1,22 @@
 .background2 {
-  background-image: url(/images/Daisy4.png);
+  background-image: url(/images/bedroom.png);
 }
 
 .disapearText {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  // align-items: flex-end;
+  // text-align: center;
   color: black;
   font-size: 40px;
   font-weight: bold;
-  position: absolute;
-  margin-top: 500px;
-  height: 100px;
-  width: 100%;
+  // position: absolute;
+  // margin-top: 500px;
+  // height: 100px;
+  // width: 100%;
 }
 
-.daisyhere {
+#daisyhere {
   display: block;
   justify-content: center;
   margin-top: 150px;

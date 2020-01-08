@@ -36,14 +36,19 @@ oxo.screens.loadScreen("home", function() {
     });
   });
 });
-
-let daisyHere = document.getElementById("daisyhere");
-daisyHere.addEventListener("click", function() {
-  let daisy = document.getElementById("sleepingdaisy");
-  if (daisy.style.display == "none") {
-    daisy.style.display == "block";
-  } else {
-    daisy.style.display = "none";
-  }
-});
 // clique jouer #fin
+
+// faire disparaitre Daisy au clique #debut
+oxo.screens.loadScreen("game1", function() {
+  let daisyHere = document.getElementById("daisyhere");
+  daisyHere.addEventListener("click", function() {
+    let daisy = document.getElementById("sleepingdaisy");
+    if (daisy.style.display == "none") {
+      daisy.style.display == "block";
+    } else {
+      daisy.style.display = "none";
+    }
+  });
+});
+
+// faire disparaitre Daisy au clique #fin
