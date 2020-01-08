@@ -28,7 +28,7 @@ oxo.screens.loadScreen("home", function() {
   let play = document.querySelector(".play");
   play.addEventListener("click", function() {
     oxo.screens.loadScreen("game0", function() {
-      const video = document.querySelector("video");
+      const video = document.querySelector("video"); // lancement de game1 apres la video (game0)
 
       video.addEventListener("ended", event => {
         oxo.screens.loadScreen("game1");
