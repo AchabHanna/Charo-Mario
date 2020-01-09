@@ -76,6 +76,7 @@ function gameScript() {
       }
     });
   }
+  game();
 }
 
 function scenario3() {
@@ -102,7 +103,7 @@ function game() {
   prepareMovePeach();
 
   function prepareMovePeach() {
-    peachPosition = rooms[oxo.utils.getRandomNumber(0, rooms.length - 1)]; // choisis une pièce du tableau aléatoirement
+    peachPosition = rooms[oxo.outils.getRandomNumber(0, rooms.length - 1)]; // choisis une pièce du tableau aléatoirement
     document.querySelector("." + peachPosition).classList.add("next"); // sert à récupérer la classe du futur changement, lui donne la classe next. on peut modifier cette classe en css
 
     console.log("peach va aller vers " + peachPosition); // empeche peach de popper dans la bedroom au debut du jeu
@@ -119,7 +120,9 @@ function game() {
     // visuel : déplacement de peach
 
     if (peachPosition === marioPosition) {
-      console.log("perdu"); //game over quand mario et peach sont dans la même pièce
+      console.log("perdu");
+      setTimeout(prepareMovePeach, delay);
+      delay -= 200; //game over quand mario et peach sont dans la même pièce
       oxo.screens.loadScreen("gameover", gameScript);
     } else {
       setTimeout(prepareMovePeach, 3000);
