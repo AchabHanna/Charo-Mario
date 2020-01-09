@@ -41,10 +41,5 @@ oxo.screens.loadScreen("home", function() {
         });
       });
     });
-  }
-  if (orders) {
-    orders.addEventListener("click", function() {
-      oxo.screens.loadScreen("tutocommande", function() {});
-    });
-  }
+  });
 });
