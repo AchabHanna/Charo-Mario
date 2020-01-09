@@ -1,4 +1,4 @@
-const rooms = ["living", "bathroom", "corridor"];
+const rooms = ["living", "element", "corridor"];
 let peachPosition;
 let marioPosition = "bedroom";
 let first = true;
@@ -47,6 +47,7 @@ daisyHere.addEventListener("click", function() {
   }
 });
 // clique jouer #fin
+
 // Changement de page superposition js data
 let pieces = document.querySelectorAll(".pieces");
 let currentPiece = "piece2";
