@@ -46,7 +46,11 @@
 }
 
 .arrow {
+  display: flex;
   width: 100px;
   height: 100px;
-  transform: translate(-800px, 310%);
+
+  &:hover {
+    cursor: pointer;
+  }
 }
