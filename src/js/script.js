@@ -1,3 +1,4 @@
+
 const rooms = ["living", "element", "corridor"];
 let peachPosition;
 let marioPosition = "bedroom";
@@ -18,6 +19,12 @@ setInterval(function() {
 
 function movePeach() {
   // visuel : déplacement de peach
+
+  if (peachPosition === marioPosition) {
+    console.log("perdu"); //game over quand mario et peach sont dans la même pièce
+  }
+}
+
 
   if (peachPosition === marioPosition) {
     console.log("perdu"); //game over quand mario et peach sont dans la même pièce
