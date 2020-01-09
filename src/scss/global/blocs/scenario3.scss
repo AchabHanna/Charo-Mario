@@ -1,30 +1,28 @@
 .scenario3 {
-  background-image: url(/images/bedroom.png);
-  background-repeat: no-repeat;
+  background: url(/images/bedroom.png) no-repeat;
   background-size: cover;
-  width: 1366px;
-  height: 750px;
 }
 
 .disapearText {
   display: flex;
   justify-content: center;
-  // align-items: flex-end;
-  // text-align: center;
-  color: black;
-  font-size: 40px;
-  font-weight: bold;
-  // position: absolute;
-  // margin-top: 500px;
-  // height: 100px;
-  // width: 100%;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: #453737;
+  opacity: 0.75;
+  position: absolute;
+  font-size: 30px;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
 }
 
 .daisyHere {
-  display: block;
-  justify-content: center;
+  position: absolute;
   margin-top: 150px;
   margin-left: 100px;
+  left: 200px;
 }
 
 .arrow3 {
@@ -33,4 +31,8 @@
   right: 0;
   width: 75px;
   height: 75px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

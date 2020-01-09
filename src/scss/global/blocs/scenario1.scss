@@ -1,5 +1,6 @@
 .scenario1 {
-  background-image: url(/images/daisy.png);
+  background: url(/images/daisy.png) no-repeat;
+  background-size: cover;
 }
 
 .daisyText {
