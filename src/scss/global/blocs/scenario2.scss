@@ -24,4 +24,7 @@
   right: 0;
   width: 75px;
   height: 75px;
+  &:hover {
+    cursor: pointer;
+  }
 }
