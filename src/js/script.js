@@ -5,7 +5,7 @@ let first = true;
 
 setInterval(function() {
   peachPosition = rooms[oxo.utils.getRandomNumber(0, rooms.length - 1)]; // choisis une pièce du tableau aléatoirement
-  document.querySelector("." + peachPosition).classList.add("next"); // sert à récupérer la classe du futur changement, lui donne la classe next. on peut modifier cette classe en css
+  // document.querySelector("." + peachPosition).classList.add("next"); // sert à récupérer la classe du futur changement, lui donne la classe next. on peut modifier cette classe en css
 
   console.log("peach va aller vers " + peachPosition); // empeche peach de popper dans la bedroom au debut du jeu
   if (first) {
@@ -18,7 +18,6 @@ setInterval(function() {
 
 function movePeach() {
   // visuel : déplacement de peach
-
   if (peachPosition === marioPosition) {
     console.log("perdu"); //game over quand mario et peach sont dans la même pièce
   }

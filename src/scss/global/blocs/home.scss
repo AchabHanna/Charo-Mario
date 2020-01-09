@@ -1,3 +1,4 @@
+
 .main {
   background: url(/images/crying-peach.png);
   background-repeat: no-repeat;
@@ -24,10 +25,12 @@
   background: url(/images/rectangle.png);
   width: 442px;
   height: 240px;
+
   position: relative;
 }
 .elipses {
   position: absolute;
+
 }
 .elipse1 {
   top: 0;
@@ -37,32 +40,36 @@
 .elipse2 {
   top: 0;
   right: 0;
-}
 
+}
+.elipse1,
 .elipse3 {
   bottom: 0;
   left: 0;
 }
 
+.elipse2,
 .elipse4 {
   bottom: 0;
-  right: 0;
+
 }
 
 .pictureOfMario {
+
   width: 440px;
+
   position: absolute;
   margin-top: 65px;
   height: 65px;
 }
 
 .menu {
-  width: 600px;
+  // width: 600px;
   height: 320px;
   display: flex;
   align-items: center;
-  justify-content: initial;
-  flex-direction: column;
+  // justify-content: initial;
+  // flex-direction: column;
   padding-top: 60px;
 
   ul {
@@ -80,6 +87,7 @@
     cursor: pointer;
     color: white;
     justify-content: center;
+    font-family: "8BIT WONDER Nominal";
   }
 }
 
