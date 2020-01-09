@@ -48,12 +48,11 @@ const scenario1 = function() {
 function gameScript() {
   let pieces = document.querySelectorAll(".pieces");
   let currentPiece = "piece2";
-  // for (let i = 0; i < pieces.length; i++) {
-  //   if (!pieces[i].classList.contains(currentPiece)) {
-  //     console.log("current piece");
-  //     pieces[i].style.display = "none";
-  //   }
-  // }
+  for (let i = 0; i < pieces.length; i++) {
+    if (!pieces[i].classList.contains(currentPiece)) {
+      pieces[i].style.display = "none";
+    }
+  }
   let elements = document.querySelectorAll(".element");
 
   for (let i = 0; i < elements.length; i++) {
@@ -76,7 +75,6 @@ function gameScript() {
       }
     });
   }
-  game();
 }
 
 function scenario3() {
@@ -92,23 +90,21 @@ function scenario3() {
   // clique jouer #fin
 }
 
-//peach
-
 function game() {
-  const rooms = ["piece3", "piece2", "piece4"];
+  const rooms = ["living", "element", "corridor"];
   let peachPosition;
-  let marioPosition = "piece1";
+  let marioPosition = "bedroom";
   let first = true;
 
   prepareMovePeach();
 
   function prepareMovePeach() {
-    peachPosition = rooms[oxo.outils.getRandomNumber(0, rooms.length - 1)]; // choisis une pièce du tableau aléatoirement
+    peachPosition = rooms[oxo.utils.getRandomNumber(0, rooms.length - 1)]; // choisis une pièce du tableau aléatoirement
     document.querySelector("." + peachPosition).classList.add("next"); // sert à récupérer la classe du futur changement, lui donne la classe next. on peut modifier cette classe en css
 
     console.log("peach va aller vers " + peachPosition); // empeche peach de popper dans la bedroom au debut du jeu
     if (first) {
-      rooms.push("piece1");
+      rooms.push("bedroom");
       first = false;
     }
 
@@ -120,12 +116,13 @@ function game() {
     // visuel : déplacement de peach
 
     if (peachPosition === marioPosition) {
-      console.log("perdu");
-      setTimeout(prepareMovePeach, delay);
-      delay -= 200; //game over quand mario et peach sont dans la même pièce
-      oxo.screens.loadScreen("gameover", gameScript);
+      console.log("perdu"); //game over quand mario et peach sont dans la même pièce
     } else {
       setTimeout(prepareMovePeach, 3000);
     }
+  }
+
+  if (peachPosition === marioPosition) {
+    console.log("perdu"); //game over quand mario et peach sont dans la même pièce
   }
 }
