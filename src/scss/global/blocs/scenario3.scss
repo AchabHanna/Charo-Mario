@@ -9,13 +9,8 @@
   align-items: center;
   text-align: center;
   color: white;
-  background-color: #453737;
-  opacity: 0.75;
-  position: absolute;
   font-size: 30px;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
+  height: 80px;
 }
 
 .daisyHere {
@@ -26,4 +21,16 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.scenario3__text-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  background-color: #453737;
+  opacity: 0.75;
+  font-family: "SuperMario256";
 }
