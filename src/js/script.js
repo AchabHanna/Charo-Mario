@@ -1,3 +1,6 @@
+import Peach from "../images/peach.png";
+
+let lastPeachPositionEl;
 // clique jouer #debut
 oxo.screens.loadScreen("home", function() {
   let play = document.querySelector(".play");
@@ -48,12 +51,6 @@ const scenario1 = function() {
 function gameScript() {
   let pieces = document.querySelectorAll(".pieces");
   let currentPiece = "piece2";
-  // for (let i = 0; i < pieces.length; i++) {
-  //   if (!pieces[i].classList.contains(currentPiece)) {
-  //     console.log("current piece");
-  //     pieces[i].style.display = "none";
-  //   }
-  // }
   let elements = document.querySelectorAll(".element");
 
   for (let i = 0; i < elements.length; i++) {
@@ -103,8 +100,27 @@ function game() {
   prepareMovePeach();
 
   function prepareMovePeach() {
-    peachPosition = rooms[oxo.outils.getRandomNumber(0, rooms.length - 1)]; // choisis une pièce du tableau aléatoirement
-    document.querySelector("." + peachPosition).classList.add("next"); // sert à récupérer la classe du futur changement, lui donne la classe next. on peut modifier cette classe en css
+    peachPosition = rooms[oxo.utils.getRandomNumber(0, rooms.length - 1)]; // choisis une pièce du tableau aléatoirement
+
+    const peachPositionEl = document.querySelector(
+      "." + peachPosition + "span"
+    ); // sert à récupérer la classe du futur changement, lui donne la classe next. on peut modifier cette classe en css
+
+    peachPositionEl.classList.add("next");
+
+    var peachImg = document.createElement("img");
+    peachImg.setAttribute("src", Peach);
+    peachImg.setAttribute("class", "peach");
+
+    var test = document.querySelector(".peach");
+
+    if (lastPeachPositionEl) {
+      lastPeachPositionEl.removeChild(test);
+    }
+
+    peachPositionEl.appendChild(peachImg);
+
+    lastPeachPositionEl = peachPositionEl;
 
     console.log("peach va aller vers " + peachPosition); // empeche peach de popper dans la bedroom au debut du jeu
     if (first) {
@@ -112,7 +128,7 @@ function game() {
       first = false;
     }
 
-    setTimeout(movePeach, 2000);
+    setTimeout(movePeach, 1000);
   }
 
   function movePeach() {
@@ -121,11 +137,12 @@ function game() {
 
     if (peachPosition === marioPosition) {
       console.log("perdu");
-      setTimeout(prepareMovePeach, delay);
-      delay -= 200; //game over quand mario et peach sont dans la même pièce
       oxo.screens.loadScreen("gameover", gameScript);
+      //oxo.screens.loadScreen("gameover", gameScript)
     } else {
-      setTimeout(prepareMovePeach, 3000);
+      setTimeout(prepareMovePeach, 2000);
+      setTimeout(prepareMovePeach, delay);
+      delay -= 500; //game over quand mario et peach sont dans la même pièce
     }
   }
 }
