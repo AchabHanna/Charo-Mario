@@ -3,6 +3,10 @@
   height: 100vh;
 }
 
+video {
+  width: 100%;
+}
+
 .arrowV {
   position: absolute;
   bottom: 0;
@@ -10,7 +14,7 @@
   width: 100px;
   height: 100px;
 
-  // &:hover {
-  //   cursor: pointer;
-  // }
+  &:hover {
+    cursor: pointer;
+  }
 }
