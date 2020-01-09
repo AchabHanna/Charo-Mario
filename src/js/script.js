@@ -1,4 +1,3 @@
-
 const rooms = ["living", "element", "corridor"];
 let peachPosition;
 let marioPosition = "bedroom";
@@ -25,11 +24,10 @@ function movePeach() {
   }
 }
 
-
-  if (peachPosition === marioPosition) {
-    console.log("perdu"); //game over quand mario et peach sont dans la même pièce
-  }
+if (peachPosition === marioPosition) {
+  console.log("perdu"); //game over quand mario et peach sont dans la même pièce
 }
+
 // clique jouer #debut
 oxo.screens.loadScreen("home", function() {
   let play = document.querySelector(".play");
