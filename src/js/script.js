@@ -1,7 +1,3 @@
-
-
-
-
 // clique jouer #debut
 oxo.screens.loadScreen("home", function() {
   let play = document.querySelector(".play");
@@ -40,7 +36,6 @@ const scenario1 = function() {
               let arrow = document.querySelector(".arrow");
               arrow.addEventListener("click", () => {
                 oxo.screens.loadScreen("game");
-
               });
             });
           });
@@ -48,12 +43,7 @@ const scenario1 = function() {
       });
     });
   });
-});
-
-
-oxo.screens.loadScreen("home1", function() {
-  console.log("yo");
-});
+};
 
 function scenario3() {
   let daisyHere = document.getElementById("sleepingdaisy");
@@ -104,7 +94,6 @@ function game() {
     console.log("perdu"); //game over quand mario et peach sont dans la même pièce
   }
 }
-
 
 // Changement de page superposition js data
 let pieces = document.querySelectorAll(".pieces");
