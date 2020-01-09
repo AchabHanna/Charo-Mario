@@ -24,23 +24,28 @@ function movePeach() {
   }
 }
 
-if (peachPosition === marioPosition) {
-  console.log("perdu"); //game over quand mario et peach sont dans la même pièce
-}
-
-// clique jouer #debut
+// clique JOUER ou COMMANDES    #DEBUT
 oxo.screens.loadScreen("home", function() {
   let play = document.querySelector(".play");
-  play.addEventListener("click", function() {
-    oxo.screens.loadScreen("game0", function() {
-      const video = document.querySelector("video"); // lancement de game1 apres la video (game0)
+  let orders = document.querySelector(".orders");
 
-      video.addEventListener("ended", event => {
-        oxo.screens.loadScreen("game1");
+  if (play) {
+    play.addEventListener("click", function() {
+      oxo.screens.loadScreen("game0", function() {
+        const video = document.querySelector("video"); // lancement de game1 apres la video (game0)
+        video.addEventListener("ended", event => {
+          oxo.screens.loadScreen("game1");
+        });
       });
     });
-  });
+  }
+  if (orders) {
+    orders.addEventListener("click", function() {
+      oxo.screens.loadScreen("tutocommande", function() {});
+    });
+  }
 });
+// clique JOUER ou COMMANDES    #FIN
 
 let daisyHere = document.getElementById("daisyhere");
 daisyHere.addEventListener("click", function() {
@@ -51,7 +56,6 @@ daisyHere.addEventListener("click", function() {
     daisy.style.display = "none";
   }
 });
-// clique jouer #fin
 
 // Changement de page superposition js data
 let pieces = document.querySelectorAll(".pieces");

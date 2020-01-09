@@ -3,7 +3,18 @@ body {
   height: 750px;
   border: 1px solid red;
   overflow: hidden;
-  // display: flex;
-  // justify-content: center;
-  // text-align: center;
+}
+
+@font-face {
+  font-family: "8BIT WONDER Nominal";
+  font-style: normal;
+  font-weight: normal;
+  src: local("8BIT WONDER Nominal"),
+    url("../fonts/8-BIT\ WONDER\ \(2\).woff") format("woff");
+}
+
+@font-face {
+  font-family: "SuperMario256";
+  src: url("/fonts/SuperMario256.ttf") format("ttf"),
+    url("/fonts/SuperMario256.ttf") format("truetype");
 }
