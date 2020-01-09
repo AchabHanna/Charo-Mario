@@ -48,11 +48,12 @@ const scenario1 = function() {
 function gameScript() {
   let pieces = document.querySelectorAll(".pieces");
   let currentPiece = "piece2";
-  for (let i = 0; i < pieces.length; i++) {
-    if (!pieces[i].classList.contains(currentPiece)) {
-      pieces[i].style.display = "none";
-    }
-  }
+  // for (let i = 0; i < pieces.length; i++) {
+  //   if (!pieces[i].classList.contains(currentPiece)) {
+  //     console.log("current piece");
+  //     pieces[i].style.display = "none";
+  //   }
+  // }
   let elements = document.querySelectorAll(".element");
 
   for (let i = 0; i < elements.length; i++) {
@@ -90,10 +91,12 @@ function scenario3() {
   // clique jouer #fin
 }
 
+//peach
+
 function game() {
-  const rooms = ["living", "element", "corridor"];
+  const rooms = ["piece3", "piece2", "piece4"];
   let peachPosition;
-  let marioPosition = "bedroom";
+  let marioPosition = "piece1";
   let first = true;
 
   prepareMovePeach();
@@ -104,7 +107,7 @@ function game() {
 
     console.log("peach va aller vers " + peachPosition); // empeche peach de popper dans la bedroom au debut du jeu
     if (first) {
-      rooms.push("bedroom");
+      rooms.push("piece1");
       first = false;
     }
 
@@ -117,12 +120,9 @@ function game() {
 
     if (peachPosition === marioPosition) {
       console.log("perdu"); //game over quand mario et peach sont dans la même pièce
+      oxo.screens.loadScreen("gameover", gameScript);
     } else {
       setTimeout(prepareMovePeach, 3000);
     }
-  }
-
-  if (peachPosition === marioPosition) {
-    console.log("perdu"); //game over quand mario et peach sont dans la même pièce
   }
 }
