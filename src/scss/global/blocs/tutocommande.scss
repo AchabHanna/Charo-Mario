@@ -5,7 +5,7 @@
 }
 
 .imgTuto {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .tutoImg {
@@ -49,4 +49,10 @@
   align-items: center;
   background-color: rgba(167, 167, 167, 0.616);
   color: white;
+}
+
+.arrow {
+  width: 100px;
+  height: 100px;
+  transform: translate(-800px, 310%);
 }
