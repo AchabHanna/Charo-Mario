@@ -22,15 +22,10 @@ oxo.screens.loadScreen("home", function() {
                 oxo.screens.loadScreen("scenario3", function() {
                   let arrow3 = document.querySelector(".arrow3");
                   arrow3.addEventListener("click", () => {
-                    oxo.screens.loadScreen("scenario4", function() {
+                    oxo.screens.loadScreen("tutocommande", function() {
                       let arrow4 = document.querySelector(".arrow4");
                       arrow4.addEventListener("click", () => {
-                        oxo.screens.loadScreen("tutocommande", function() {
-                          let arrow = document.querySelector(".arrow");
-                          arrow.addEventListener("click", () => {
-                            oxo.screens.loadScreen("game");
-                          });
-                        });
+                        oxo.screens.loadScreen("game");
                       });
                     });
                   });

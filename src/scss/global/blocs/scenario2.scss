@@ -1,19 +1,21 @@
 .scenario2 {
-  background-image: url(/images/bedroom.png);
+  background: url(/images/daisy.png) no-repeat;
+  background-size: cover;
 }
 
 .daisyText2 {
   display: flex;
   justify-content: center;
-  // align-items: center;
-  // text-align: center;
+  align-items: center;
+  text-align: center;
   color: white;
   background-color: #453737;
   opacity: 0.75;
-  // position: absolute;
+  position: absolute;
   font-size: 30px;
-  // bottom: 0;
-  // width: 100%;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
 }
 
 .arrow2 {
