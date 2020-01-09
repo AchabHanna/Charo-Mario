@@ -10,12 +10,12 @@
   background: url(/images/crying-peach.png);
   // width: 1366px;
   // height: 750px;
-  background-position: inherit;
+  // background-position: inherit;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.background {
+.backgroundH {
   width: 1366px;
   height: 750px;
   background: #0d050538;
@@ -62,7 +62,7 @@
   right: 0;
 }
 .pictureOfMario {
-  width: 308px;
+  width: 340px;
   position: absolute;
   margin-top: 50px;
 }
@@ -96,21 +96,21 @@
 }
 
 .star1 {
-  width: 40px;
+  width: 30px;
   height: 30px;
   order: 1;
   display: none;
 }
 
 .star2 {
-  width: 40px;
+  width: 30px;
   height: 30px;
   order: 1;
   display: none;
 }
 
 .star3 {
-  width: 40px;
+  width: 30px;
   height: 30px;
   order: 1;
   display: none;
@@ -118,24 +118,39 @@
 
 .play {
   order: 2;
+  &:hover {
+    + .star1 {
+      display: flex;
+    }
+  }
 }
 
 .orders {
   order: 2;
+  &:hover {
+    + .star2 {
+      display: flex;
+    }
+  }
 }
 
 .exit {
   order: 2;
+  &:hover {
+    + .star3 {
+      display: flex;
+    }
+  }
 }
 
-.play:hover + .star1 {
-  display: flex;
-}
+// .play:hover + .star1 {
+//   display: flex;
+// }
 
-.orders:hover + .star2 {
-  display: flex;
-}
+// .orders:hover + .star2 {
+//   display: flex;
+// }
 
-.exit:hover + .star3 {
-  display: flex;
-}
+// .exit:hover + .star3 {
+//   display: flex;
+// }
