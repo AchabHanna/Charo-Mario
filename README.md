@@ -3,9 +3,13 @@
  ___"Création d'un jeu vidéo en javascript"___
 
 ## Membres :
-  - lina BLIDI
-  - Camille CERIN
-  - Hanna ACHAB
+  [Lina BLIDI](https://github.com/LinaBlidi)
+  
+  [Camille CERIN](https://github.com/CamyCerin)
+  
+  [Hanna ACHAB](https://github.com/AchabHanna)
+  
+
   
 ## Caractéristiques :
   
